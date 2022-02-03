@@ -33,26 +33,28 @@ origin https://github.com/username-source/repository-name.git (push)
 ```
 
 ## Ejercicio
-### Verificar PR's a incluir en el Release
-Chequea que todos los PR's que se encuentran mergueados tengan un milestone asignado, si no es así asignele el milestone correspondiente.
 
-Crear rama de release 1.0 desde master
+1. Chequea que todos los PR's que se encuentran mergueados tengan un milestone asignado, si no es así asignele el milestone correspondiente.
+
+2. Crear rama de release 1.0 desde master
 
 ```sh
 $ git checkout -b "release/1.0"
 ```
 
-Actualizar CHANGELOG.md con los cambios que se publican.
+3. Actualizar CHANGELOG.md con los cambios que se publican.
 
-Subir los cambios a la rama release
+4. Subir los cambios a la rama release
 
-Generar PR para enviar los cambios del cambio de version a master
+5. Generar PR para enviar los cambios del cambio de version a master
 
-Crear el milestone para el siguiente release
+6. Crear el milestone para el siguiente release
 
+7. Publicar el release. Como no podemos ejecutar el comando ``` fury create-version ``` para dejar publicada la version de la lib, procederemos de la siguiente manera:
 
-
-
-
-
+- Ve al repositorio en github y en el panel derecho veras un apartado que dice "Release" y presionaremos sobre "create a new Release".
+- En la seccion de tag añadiremos uno con el numero de la version de la lib.
+- En la seccion de target seleccionaremos la rama release que se creo anteriormente.
+- Añadimos una descripcion del release (normalmente fury añade los cambios que incluimos en el CHANGELOG.md) 
+- Publicamos el release
 
